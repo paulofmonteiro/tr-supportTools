@@ -1,27 +1,48 @@
 {
     "manifest_version": 2,
 
+    //extension information
     "name": "TR SUPPORT TOOLS",
     "version": "0.1",
 
     "default_locale": "pt_BR",
     "description": "Ferramentas para ganhar produtividade no Suporte a Clientes",
-    //"icons": {...},
+    
+    //icons
+    "icons": { 
+        "16":   "icons/icon_16x16.png",
+        "32":   "icons/icon_32x32.png",
+        "48":   "icons/icon_48x48.png",
+        "64":   "icons/icon_64x64.png",
+        "128":  "icons/icon_128x128.png" 
+    },
 
+    "browser_action": {
+        "default_icon": {                    
+           "16":   "icons/icon_16x16.png",
+            "32":   "icons/icon_32x32.png"          
+        },
+        "default_title": "TR SUPPORT TOOLS"
+        //"default_popup": "popup.html"        
+    },
 
+    //scripts and UI
     "content_scripts": [{
         "matches": [
             "https://secure.softcomex.com.br/webcallcenter/tela_ctrl_suporte?*",
             "https://secure.softcomex.com.br/webcallcenter/frame?p_destino=pkg_wcc_cliente.prc_relatorio_consulta?p_cod_atividade=*"
         ],
-        "js": ["pmlogger.js", "content.js"]
+        "js": ["js/pmlogger.js", "js/content.js"]
     }],
 
     "background": {
         "page": "background.html"
     },
 
-    "options_page": "options.html",
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
 
     "permissions": [
         "activeTab",
