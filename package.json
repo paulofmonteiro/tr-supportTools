@@ -1,0 +1,9 @@
+{
+  "name": "tr support tools",
+  "versaion": "0.1",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,6 +1,10 @@
 # General Files #
 #################
 
+# building tools #
+##################
+node_modules/*
+
 # Images #
 ##########
 *.jpg
