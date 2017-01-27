@@ -2,8 +2,11 @@
   "name": "tr support tools",
   "versaion": "0.1",
   "devDependencies": {
+    "angular": "^1.6.1",
+    "angular-animate": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-notify": "^2.2.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
   }
 }
