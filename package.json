@@ -5,6 +5,9 @@
     "angular": "^1.6.1",
     "angular-animate": "^1.6.1",
     "gulp": "^3.9.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.4.0",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.1"
