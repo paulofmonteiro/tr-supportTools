@@ -5,6 +5,10 @@
 ##################
 node_modules/*
 
+# ide files #
+##################
+.vscode/*
+
 # Images #
 ##########
 *.jpg
