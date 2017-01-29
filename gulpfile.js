@@ -58,10 +58,12 @@ var options = {
         resourcesFolder: "./resources/",
         resources: {
             angular: "./node_modules/angular*/**/*.min.js",
+            bootstrap: "./node_modules/bootstrap/dist/**/*.min",
             sass: "./resources/sass/*.scss",
             js: "./resources/js/**/*.js",
             icons: "./resources/logos_tech/"
         },
+        
         publicFolder: "./extension/",
         public: {
             css: "./extension/css",
@@ -70,7 +72,7 @@ var options = {
     }
 };
 
-gulp.task("default", ["sass", "js", "watch"], function() {
+gulp.task("default", ["sass", "js"], function() {
 
 });
 
@@ -80,11 +82,12 @@ gulp.task('watch', function() {
 })
 
 gulp.task("sass", function() {
-    gulp.src(options.paths.resources.sass)
+    gulp.src([options.paths.resources.sass, options.paths.resources.bootstrap + ".css"])
         .pipe(plugins.sass({ outputStyle: "extended" }))
+        .pipe(plugins.flatten())
         .pipe(gulp.dest(options.paths.public.css))
         .pipe(plugins.notify({
-            "title": "Project web site: " + infos.name,
+            "title": "Project web site: " + options.info.name,
             "subtitle": "SASS - COMPILED",
             "message": "<%= file.relative %>",
             "sound": "Frog",
@@ -94,8 +97,7 @@ gulp.task("sass", function() {
 })
 
 gulp.task("js", function() {
-    console.log(options.paths.resources.icons);
-    gulp.src([options.paths.resources.js, options.paths.resources.angular])
+    gulp.src([options.paths.resources.js, options.paths.resources.angular, options.paths.resources.bootstrap + ".js"])
         .pipe(plugins.if(options.minified, plugins.uglify()))
         .pipe(plugins.flatten())
         .pipe(gulp.dest(options.paths.public.js))
@@ -107,4 +109,4 @@ gulp.task("js", function() {
             "icon": options.paths.resources.icons + "sass_logo.png",
             "onLast": true,
         }));
-})
+});
