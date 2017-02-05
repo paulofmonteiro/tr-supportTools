@@ -1,0 +1,13 @@
+.option-panel .title {
+  padding: 6px 10px 10px;
+  margin-bottom: 0;
+  font-size: 1.4em; }
+  .option-panel .title .icon {
+    float: right; }
+    .option-panel .title .icon:hover {
+      cursor: pointer;
+      color: orange; }
+
+.option-panel .body {
+  padding: 10px;
+  border: 3px solid orange; }

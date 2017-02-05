@@ -59,6 +59,8 @@ var options = {
         resources: {
             angular: "./node_modules/angular*/**/*.min.js",
             bootstrap: "./node_modules/bootstrap/dist/**/*.min",
+            componentsControllers: ".resources/components/**/*.js",
+            componentsTemplates: ".resources/components/**/*.html",
             sass: "./resources/sass/*.scss",
             js: "./resources/js/**/*.js",
             icons: "./resources/logos_tech/"
@@ -66,17 +68,18 @@ var options = {
         
         publicFolder: "./extension/",
         public: {
-            css: "./extension/css",
-            js: "./extension/js"
+            css: "./extension/css/",
+            js: "./extension/js/",
+            components: "./extension/components/"
         }
     }
 };
 
-gulp.task("default", ["sass", "js"], function() {
+gulp.task("default", ["sass", "js", "components", "watch"], function() {
 
 });
 
-gulp.task('watch', function() {
+gulp.task("watch", function() {
     gulp.watch(options.paths.resources.sass, ["sass"]);
     gulp.watch(options.paths.resources.js, ["js"]);
 })
@@ -107,6 +110,19 @@ gulp.task("js", function() {
             "message": "<%= file.relative %>",
             "sound": "Frog",
             "icon": options.paths.resources.icons + "sass_logo.png",
+            "onLast": true,
+        }));
+});
+
+gulp.task("components", function(){
+    gulp.src(options.paths.resources.componentsTemplates)
+        .pipe(gulp.dest(options.paths.public.components))
+        .pipe(plugins.notify({
+            "title": "Project web site: " + options.info.name,
+            "subtitle": "COMPONENTES - COPIED",
+            "message": "<%= file.relative %>",
+            "sound": "Frog",
+            "icon": options.paths.resources.icons + "js_logo.png",
             "onLast": true,
         }));
 });
