@@ -1,74 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR" ng-app="options">
-
+<html lang="pt-BR" ng-app="options"></html>
 <head>
-    <title>TR - SUPPORT TOOL</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/options.css" rel="stylesheet">
-
-    <script src="js/firebase.js"></script>
-    <script src="js/pmlogger.js"></script>
-    <script src="js/angular.min.js"></script>
+  <title>TR - SUPPORT TOOL</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/options.css" rel="stylesheet"/>
+  <script src="js/firebase.js"></script>
+  <script src="js/pmlogger.js"></script>
+  <script src="js/angular.min.js"></script>
 </head>
-
 <body>
-    <div class="container-fluid" ng-controller="MainController as main">
-        <div class="container row">
-            <form action="#">
-                <div class="option-panel">
-                    <h3 class="title">Login WCC<span class="icon glyphicon glyphicon-question-sign"></span></h3>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label for="loginWcc">Login</label>
-                            <input type="text" class="form-control" id="loginWcc" placeholder="Login">
-                        </div>
-                        <div class="form-group">
-                            <label for="passWcc">Senha</label>
-                            <input type="password" class="form-control" id="passWcc" placeholder="Senha">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="option-panel">
-                    <h3 class="title">Login IFS<span class="icon glyphicon glyphicon-question-sign"></span></h3>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label for="loginWcc">Login</label>
-                            <input type="text" class="form-control" id="loginWcc" placeholder="Login">
-                        </div>
-                        <div class="form-group">
-                            <label for="passWcc">Senha</label>
-                            <input type="password" class="form-control" id="passWcc" placeholder="Senha">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="option-panel">
-                    <h3 class="title">Modulos<span class="icon glyphicon glyphicon-question-sign"></span></h3>
-
-                    <div class="body">
-                        <div class="form-group">
-                            <label for="loginWcc">Login</label>
-                            <input type="text" class="form-control" id="loginWcc" placeholder="Login">
-                        </div>
-                        <div class="form-group">
-                            <label for="passWcc">Senha</label>
-                            <input type="password" class="form-control" id="passWcc" placeholder="Senha">
-                        </div>
-                    </div>
-                </div>
-            </form>
+  <div class="container-fluid" ng-controller="MainController as main">
+    <div class="container row">
+      <form action="#">
+        <div class="option-panel">
+          <h3 class="title">
+             Login WCC<span class="icon glyphicon glyphicon-question-sign"></span></h3>
+          <div class="body">
+            <div class="form-group">
+              <label for="loginWcc">Login</label>
+              <input class="form-control" type="text" id="loginWcc" placeholder="Login"/>
+            </div>
+            <div class="form-group">
+              <label for="passWcc">Senha</label>
+              <input class="form-control" type="password" id="passWcc" placeholder="Senha"/>
+            </div>
+          </div>
         </div>
+        <div class="option-panel">
+          <h3 class="title">
+             Login WCC<span class="icon glyphicon glyphicon-question-sign"></span></h3>
+          <div class="body">
+            <div class="form-group">
+              <label for="loginWcc">Login</label>
+              <input class="form-control" type="text" id="loginWcc" placeholder="Login"/>
+            </div>
+            <div class="form-group">
+              <label for="passWcc">Senha</label>
+              <input class="form-control" type="password" id="passWcc" placeholder="Senha"/>
+            </div>
+          </div>
+        </div>
+        <div class="option-panel">
+          <h3 class="title">
+             Login WCC<span class="icon glyphicon glyphicon-question-sign"></span></h3>
+          <div class="body">
+            <div class="form-group">
+              <label for="loginWcc">Login</label>
+              <input class="form-control" type="text" id="loginWcc" placeholder="Login"/>
+            </div>
+            <div class="form-group">
+              <label for="passWcc">Senha</label>
+              <input class="form-control" type="password" id="passWcc" placeholder="Senha"/>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
-
-    <div class="container-scripts">
-        <script src="js/options.js"></script>
-    </div>
+  </div>
+  <div class="container-scripts">
+    <script src="js/options.js"></script>
+  </div>
 </body>
-
-</html>
