@@ -20,7 +20,7 @@ firebase.initializeApp(configFirebase);
 /**
  * define angular app
  */
-var app = angular.module('options', []);
+var app = angular.module('options', ['ui-router']);
 
 app.service('ConfigService', ['$http', function($http){
    var service = this;
