@@ -1,0 +1,4 @@
+
+<div class="modules-container" ng-transclude>
+  <module-panel ng-repeat="panel in model.panels track by panel.index" config="model.getModuleConfig(panel.index)"></module-panel>
+</div>
