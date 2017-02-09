@@ -2,7 +2,7 @@
 html(lang="pt-BR" ng-app="options")
 
 head
-    title OPTIONS | TR - SUPPORT TOOLS
+    title TR - SUPPORT TOOL
     
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -13,20 +13,50 @@ head
     script(src="js/firebase.js")
     script(src="js/pmlogger.js")
     script(src="js/angular.min.js")
-    script(src="js/angular-ui-router.min.js")
+
 
 body
-    div.container-fluid
-        header.header-container.row
-            div.inner-container.clearfix
-                h2.abbreviation TR
-                div.logo-container
-                    img(src="icons/icon_32x32.png")                
-                h2.title OPTIONS
+    div.container-fluid(ng-controller="MainController as main")
+        div.container.row
+            form(action="#")
+                div.option-panel
+                    h3.title 
+                        |Login WCC
+                        span.icon.glyphicon.glyphicon-question-sign
 
-        modules-container
-           
-                          
+                    div.body
+                        div.form-group
+                            label(for="loginWcc") Login
+                            input(type="text" class="form-control" id="loginWcc" placeholder="Login")
+                        div.form-group
+                            label(for="passWcc") Senha
+                            input(type="password" class="form-control" id="passWcc" placeholder="Senha")
+
+                div.option-panel
+                    h3.title 
+                        |Login WCC
+                        span.icon.glyphicon.glyphicon-question-sign
+
+                    div.body
+                        div.form-group
+                            label(for="loginWcc") Login
+                            input(type="text" class="form-control" id="loginWcc" placeholder="Login")
+                        div.form-group
+                            label(for="passWcc") Senha
+                            input(type="password" class="form-control" id="passWcc" placeholder="Senha")
+
+                div.option-panel
+                    h3.title 
+                        |Login WCC
+                        span.icon.glyphicon.glyphicon-question-sign
+
+                    div.body
+                        div.form-group
+                            label(for="loginWcc") Login
+                            input(type="text" class="form-control" id="loginWcc" placeholder="Login")
+                        div.form-group
+                            label(for="passWcc") Senha
+                            input(type="password" class="form-control" id="passWcc" placeholder="Senha")
 
     div.container-scripts
         script( src="js/options.js")

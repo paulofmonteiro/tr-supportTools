@@ -56,7 +56,7 @@ var paths = {
 };
 
 var angular = {
-    modules: "./node_modules/angular*/**/*.min.js",
+    angular: "./node_modules/angular*/**/*.min.js",
     componentsControllers: "./resources/components/**/*.js",
     componentsTemplates: "./resources/components/**/*.pug"
 };
@@ -84,21 +84,19 @@ var dist = {
  * 			Tasks              *
  *                             *
  * ****************************/
-gulp.task("default", ["view", "sass", "js", "components:controllers", "components:templates", "watch"], function() {
+gulp.task("default", ["sass", "js", "components", "watch"], function() {
 
 });
 
 gulp.task("watch", function() {
-    gulp.watch(resources.view, ["view"]);
+    gulp.watch(resources.views, ["view"]);
     gulp.watch(resources.sass, ["sass"]);
     gulp.watch(resources.js, ["js"]);
-    gulp.watch(angular.componentsControllers, ["components:controllers"]);
-    gulp.watch(angular.componentsTemplates, ["components:templates"]);
 })
 
 gulp.task("view", function() {
     gulp.src(resources.view)
-        .pipe($.if(dist.build, $.pug({ doctype: "html" }), $.pug({ pretty: true, doctype: "html" })))
+        .pipe($.if(dist.build, $.pug(), $.pug({ pretty: true })))
         .pipe($.flatten())
         .pipe(gulp.dest(dist.view))
         .pipe($.notify({
@@ -127,7 +125,7 @@ gulp.task("sass", function() {
 })
 
 gulp.task("js", function() {
-    gulp.src([resources.js, , resources.bootstrap + ".js", angular.modules])
+    gulp.src([resources.js, , resources.bootstrap + ".js"])
         .pipe($.if(dist.build, $.uglify()))
         .pipe($.flatten())
         .pipe(gulp.dest(dist.js))
@@ -150,19 +148,21 @@ gulp.task("components:controllers", function() {
             "subtitle": "COMPONENTES CONTROLLER - COMPILED",
             "message": "<%= file.relative %>",
             "sound": "Frog",
-            "icon": resources.icons + "js_logo.png"
+            "icon": resources.icons + "js_logo.png",
+            "onLast": true,
         }));
 });
 
 gulp.task("components:templates", function() {
     gulp.src(angular.componentsTemplates)
-        .pipe($.if(dist.build, $.pug({ doctype: "html" }), $.pug({ pretty: true, doctype: "html" })))
+        .pipe($.if(dist.build, $.pug(), $.pug({ pretty: true })))
         .pipe(gulp.dest(dist.components))
         .pipe($.notify({
             "title": "Project web site: " + options.name,
             "subtitle": "COMPONENTES TEMPLATES - COMPILED",
             "message": "<%= file.relative %>",
             "sound": "Frog",
-            "icon": resources.icons + "pug_logo.png"
+            "icon": resources.icons + "pug_logo.png",
+            "onLast": true,
         }));
 });

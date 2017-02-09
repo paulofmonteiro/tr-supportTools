@@ -1,97 +1,28 @@
 {
-    "index": [
-        { "name": "core", "index": "0", "visible": true },
-        { "name": "gist", "index": "1", "visible": true },
-        { "name": "toDoList", "index": "2", "visible": true },
-        { "name": "vpn", "index": "3", "visible": true },
-        { "name": "trello", "index": "4", "visible": true }
-    ],
-    "modules": [{
+    "modules": [
+        { 
             "name": "core",
-            "icon": "icons/core_64x64.png",
-            "components": [{
+            "painels": [
+                {
                     "name": "loginWCC",
-                    "title": "Login WCC | Projeto Suporte",
-
-                    "formElements": [{
-                            "type": "text",
+                    "title": "Login WCC",
+                    
+                    "formElements": [
+                        {
+                            "type": "text", 
                             "label": "Login",
-                            "placeholder": "e-Mail utilizado para logar WCC",
                             "id": "loginWcc"
                         },
 
                         {
-                            "type": "password",
+                            "type": "password", 
                             "label": "Senha",
-                            "id": "passWcc",
-                            "placeholder": "Senha utilizada para logar no WCC"
+                            "id": "passWcc"
                         }
                     ]
-
-                },
-                {
-                    "name": "loginIFS",
-                    "title": "Login do Apontamento de Horas",
-
-                    "formElements": [{
-                            "type": "text",
-                            "label": "Login",
-                            "placeholder": "Login utilizado para apontar horas",
-                            "id": "loginWcc"
-                        },
-
-                        {
-                            "type": "password",
-                            "label": "Senha",
-                            "id": "passWcc",
-                            "placeholder": "Senha utilizada para apontar horas"
-                        }
-                    ]
-
-                },
-                {
-                    "name": "selectModules",
-                    "title": "Escolha os Modulos que deseja utilizar",
-
-                    "formElements": [{
-                            "type": "text",
-                            "label": "Login",
-                            "placeholder": "Login utilizado para apontar horas",
-                            "id": "loginWcc"
-                        },
-
-                        {
-                            "type": "password",
-                            "label": "Senha",
-                            "id": "passWcc",
-                            "placeholder": "Senha utilizada para apontar horas"
-                        }
-                    ]
-
+                    
                 }
             ]
-        },
-        {
-            "name": "gist",
-            "icon": "icons/gist_64x64.png",
-            "components": [{
-                "name": "loginWCC",
-                "title": "Login WCC",
-
-                "formElements": [{
-                        "type": "text",
-                        "label": "Login",
-                        "id": "loginWcc"
-                    },
-
-                    {
-                        "type": "password",
-                        "label": "Senha",
-                        "id": "passWcc"
-                    }
-                ]
-
-            }]
         }
     ]
 }
