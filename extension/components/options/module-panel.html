@@ -1,0 +1,21 @@
+
+<div class="module-panel col-sm-4 col-md-3" ng-transclude>
+  <div class="header row">
+    <div class="inner">
+      <div class="logo-container"><img ng-src="{{model.config.icon}}"></div>
+      <h2 class="module-title">{{model.config.name}}</h2>
+    </div>
+    <div class="help-container"><i class="glyphicon glyphicon-question-sign">   </i></div>
+  </div>
+  <div class="body">
+    <form id="{{model.config.name}}">
+      <div class="component-container" ng-repeat="component in model.config.components track by $index">
+        <h3 class="component-title">{{component.title}}</h3>
+        <div class="form-group" ng-repeat="element in component.formElements track by $index">
+          <label for="element.id">{{element.label}}</label>
+          <input class="form-control" id="{{element.id}}" name="{{element.id}}" type="{{element.type}}" placeholder="{{element.placeholder}}">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

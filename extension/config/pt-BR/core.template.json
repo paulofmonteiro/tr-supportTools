@@ -1,0 +1,66 @@
+{
+
+    "name": "core",
+    "icon": "icons/core_64x64.png",
+    "components": [{
+            "name": "loginWCC",
+            "title": "Login WCC | Projeto Suporte",
+
+            "formElements": [{
+                    "type": "text",
+                    "label": "Login",
+                    "placeholder": "e-Mail utilizado para logar WCC",
+                    "id": "loginWcc"
+                },
+
+                {
+                    "type": "password",
+                    "label": "Senha",
+                    "id": "passWcc",
+                    "placeholder": "Senha utilizada para logar no WCC"
+                }
+            ]
+
+        },
+        {
+            "name": "loginIFS",
+            "title": "Login do Apontamento de Horas",
+
+            "formElements": [{
+                    "type": "text",
+                    "label": "Login",
+                    "placeholder": "Login utilizado para apontar horas",
+                    "id": "loginWcc"
+                },
+
+                {
+                    "type": "password",
+                    "label": "Senha",
+                    "id": "passWcc",
+                    "placeholder": "Senha utilizada para apontar horas"
+                }
+            ]
+
+        },
+        {
+            "name": "selectModules",
+            "title": "Escolha os Modulos que deseja utilizar",
+
+            "formElements": [{
+                    "type": "text",
+                    "label": "Login",
+                    "placeholder": "Login utilizado para apontar horas",
+                    "id": "loginWcc"
+                },
+
+                {
+                    "type": "password",
+                    "label": "Senha",
+                    "id": "passWcc",
+                    "placeholder": "Senha utilizada para apontar horas"
+                }
+            ]
+
+        }
+    ]        
+}

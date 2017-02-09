@@ -1,22 +1,41 @@
-.option-panel{
-    .title{
-        padding: 6px 10px 10px;
-        margin-bottom: 0;
-
-        font-size: 1.4em;
-
-        .icon{
-            float: right;
-
-            &:hover{
-                cursor: pointer;
-                color: orange;
-            }
+.header-container {
+    padding: 15px;
+    
+    background: darkorange;
+    .inner-container {
+        width: 240px;
+        margin: 0 auto;
+        .abbreviation {
+            float: left;
+            width: 50px;
+            margin: 0px;
+            color: #fff;
+        }
+        .logo-container {
+            float: left;
+            width: 32px;
+        }
+        .title {
+            float: left;
+            width: 100px;
+            padding-left: 10px;
+            margin: 0;
+            color: #fff;
         }
     }
+}
 
-    .body{
-        padding: 10px;
-        border: 3px solid orange;
+.modules-container{
+    border-top: 3px solid #000;
+}
+
+.module-panel{
+    border: 3px solid #000;
+    border-top: none;
+
+    background: darkorange;
+
+    .header{
+        padding: 15px;
     }
 }
